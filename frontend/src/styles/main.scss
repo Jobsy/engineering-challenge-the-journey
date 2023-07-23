@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  border: 2px solid var(--secondary-color);
+}
+
+.cell {
+  border: 2px solid var(--secondary-color);
+  padding: 10px;
+  width: stretch;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+
+  &.highlight {
+    border: 2px solid var(--success-color);
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .value {
+      flex: 1;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.processing, .success {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 20px;
+}
+
+.save-button {
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.processing, .success, .hide-message, .error {
+  animation: fadeOut 5s forwards; /* fadeOut animation for 5 seconds */
+  animation-fill-mode: forwards; /* keep the element in the state of the last keyframe after the animation ends */
+}
