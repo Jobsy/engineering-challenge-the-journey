@@ -87,43 +87,43 @@ To build the application for production and serve it, use the following commands
 npm run build
 ```
 
-# Spreadsheet Application Checklist
+## Spreadsheet Application Checklist
 
-## General Requirements
+### General Requirements
 - [X] Implement a simple spreadsheet application based on the provided design in Figma.
 - [X] Create a reactive grid of inputs that auto-saves user inputs over time.
 - [X] Design the UI as close to the provided design as possible.
 - [X] Ensure the UI is performant and provides a friendly user experience.
 - [X] Handle potential performance issues with the server, which is slow and buggy.
 
-## Auto-saving User Input
+### Auto-saving User Input
 - [X] Implement auto-saving functionality to save user inputs periodically.
 - [X] Utilize the server's ability to save spreadsheet data as a CSV blob.
 - [X] Handle server errors and random latencies gracefully in the UI.
 
-## Reactive UI
+### Reactive UI
 - [X] Ensure the UI reacts responsively to user interactions and updates.
 - [X] Compute spreadsheet formulas on the client side to provide real-time updates.
 - [X] Computation of expressions in cells should trigger onblur events.
 - [X] Handle expressions that reference cells with changing values and recompute relevant expressions accordingly.
 
-## Spreadsheet Expression Language
+### Spreadsheet Expression Language
 - [X] Support a simple expression language where computable expressions must be prefixed with '='.
 - [X] Enable basic arithmetic expressions, with optional support for floats.
 - [X] Allow value references in expressions using column labels (A to Z) and row numbers (n+).
 - [ ] Support multiple-digit row numbers for value references (e.g., A10, A100).
 
-## Technology
+### Technology
 - [X] Implement the solution using React.
 - [X] Use either JavaScript or TypeScript for the project, based on your preference.
 - [X] Ensure code implementation follows best practices and makes good design decisions.
 
-## Server
+### Server
 - [X] Work with the provided server, which is slow, buggy, and designed to test UI performance.
 - [X] Handle server errors and random latencies while still aiming for an exceptional user experience.
 - [X] Use the server's API to save spreadsheet data in CSV format for auto-saving functionality.
 
-## Additional Notes
+### Additional Notes
 - [X] Don't confuse users with missing design elements; add elements to enhance user understanding and experience.
 - [X] Feel free to improve the design and functionality as needed to create a seamless spreadsheet application.
 - [X] Make good design and code implementation choices to provide an outstanding solution.
@@ -132,9 +132,9 @@ npm run build
 *Note: The checklist outlines the key requirements for the spreadsheet application based on the provided instructions.*
 
 
-# Spreadsheet TODOs (If I had more time) Checklist
+## Spreadsheet TODOs (If I had more time) Checklist
 
-## Cell Component - Potential Improvements Checklist
+### Cell Component - Potential Improvements Checklist
 - [ ] **Input Validation**: Add input validation for the cell value to ensure valid formula expressions and numerical values are entered.
 - [ ] **Keyboard Navigation**: Implement keyboard navigation to allow users to navigate through cells using arrow keys.
 - [ ] **Undo/Redo**: Add undo/redo functionality to allow users to revert changes made to cells.
@@ -154,7 +154,7 @@ npm run build
 - [ ] **Offline Support**: Consider adding offline support, allowing users to continue editing the spreadsheet when offline and syncing changes when online.
 - [ ] **Responsive Design**: Ensure the Cell component and the entire spreadsheet application are fully responsive for different screen sizes.
 
-## CellInput Component - Potential Improvements Checklist
+### CellInput Component - Potential Improvements Checklist
 - [ ] **Input Validation**: Implement input validation to ensure user input is in the expected format.
 - [ ] **Error Handling**: Add error handling to provide feedback on errors during input handling or evaluation.
 - [ ] **Accessibility**: Enhance accessibility by adding proper labels or aria-label attributes.
@@ -167,7 +167,7 @@ npm run build
 - [ ] **Rich Text Support**: Implement support for rich text editing if required.
 - [ ] **Performance Optimization**: Optimize rendering for large grids and smooth interactions.
 
-## Grid Component - Potential Improvements Checklist
+### Grid Component - Potential Improvements Checklist
 - [ ] **Code Modularity**: Refactor the Grid component to adhere to SOLID principles and improve its readability and maintainability.
 - [ ] **Error Handling**: Improve error messages for formula evaluation and API calls.
 - [ ] **Optimization**: Optimize the recursive update of dependent cells for better performance.
@@ -183,7 +183,7 @@ npm run build
 - [ ] **State Management**: Consider using Redux or React Context API for complex state management.
 - [ ] **Localization**: Add support for localization and translations for different languages.
 
-## SearchBar Component - Potential Improvements Checklist
+### SearchBar Component - Potential Improvements Checklist
 - [ ] **Accessibility**: Add appropriate labels or aria-label attributes to improve accessibility for screen readers.
 - [ ] **Styling**: Enhance the styling of the search bar to make it visually appealing and consistent with the application design.
 - [ ] **Debouncing**: Implement debouncing on the onChange callback to reduce the number of search queries fired during rapid input changes.
@@ -193,7 +193,7 @@ npm run build
 - [ ] **Internationalization (i18n)**: If the application supports multiple languages, ensure that the search bar text is properly localized.
 - [ ] **Error Handling**: Add error handling to handle any unexpected errors that may occur during search query changes.
 
-## evaluateFormula Function - Potential Improvements Checklist
+### evaluateFormula Function - Potential Improvements Checklist
 - [ ] **Input Validation**: Add input validation to ensure that the formula and gridData parameters are valid before attempting evaluation.
 - [ ] **Performance Optimization**: Evaluate the possibility of optimizing the formula evaluation process, especially for large grids, to improve performance.
 - [ ] **Code Modularity**: Evaluate whether there are opportunities to break down the evaluateFormula function into smaller, more manageable functions to improve code maintainability and readability.
