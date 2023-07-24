@@ -72,12 +72,18 @@ npm install
 
 #### Development Mode
 
-To run the application in development mode with hot-reloading, use the following command:
+To run the application in development mode with docker, use the following command:
 ```bash
-npm start
+npm run start-app
 ```
 
-This will start the development server, and you can access the app at `http://localhost:3000`.
+This will start both the frontend development server, and you can access the app at `http://localhost:3000` and the backend server at `http://localhost:8082`
+
+To run the application in development mode with docker, use the following command:
+```bash
+npm run stop-app
+```
+This will stop both the frontend and backend server, and also bring dwon the the docker containers.
 
 #### Production Mode
 
