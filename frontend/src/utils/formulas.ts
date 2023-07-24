@@ -1,8 +1,17 @@
 // // todo - why mathjs
 import { create, all } from 'mathjs';
 
+/**
+ * Create a math instance with all available functions.
+ */
 const math = create(all);
 
+/**
+ * Evaluate a mathematical formula with cell references using mathjs.
+ * @param {string} formula - The mathematical formula to be evaluated.
+ * @param {string[][]} gridData - The 2D array representing the data grid containing cell values.
+ * @returns {number | null} - The evaluated result of the formula, or null if evaluation fails.
+ */
 export const evaluateFormula = (formula: string, gridData: string[][]): number | null => {
   try {
     const columnHeaders = Array.from({ length: gridData[0].length }, (_, index) => String.fromCharCode(65 + index));
@@ -23,8 +32,8 @@ export const evaluateFormula = (formula: string, gridData: string[][]): number |
 
     const result = math.evaluate(sanitizedFormula); // evaluate the formula using mathjs
     return typeof result === 'number' && !Number.isNaN(result) ? result : null;
-  } catch (error: any) {
-    console.error(`Error evaluating formula: ${error.message}`);
+  } catch (error) {
+    console.error(`Error evaluating formula: ${error}`);
     return null;
   }
 };
