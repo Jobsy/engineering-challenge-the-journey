@@ -316,9 +316,9 @@ const Grid: React.FC<GridProps> = ({ rows, columns }) => {
       String.fromCharCode(65 + index)
     ); // A, B, ...
     cells.push(
-      <div className="row-header" key="header" data-testid="header-row">
+      <div className='row-header' key='header' data-testid='header-row'>
         {columnHeaders.map((header, index) => (
-          <div className="cell header" key={index}>
+          <div className='cell header' key={index}>
             {header}
           </div>
         ))}
@@ -356,7 +356,7 @@ const Grid: React.FC<GridProps> = ({ rows, columns }) => {
         );
       }
   
-      cells.push(<div className="row" key={i} data-testid={`row-${i}`}>{row}</div>);
+      cells.push(<div className='row' key={i} data-testid={`row-${i}`}>{row}</div>);
     }
   
     return cells;
@@ -395,24 +395,24 @@ const Grid: React.FC<GridProps> = ({ rows, columns }) => {
 
   return (
     <>
-      <div className="grid">
+      <div className='grid'>
         <SearchBar onChange={handleSearch} />
         {renderCells()}
       </div>
 
       {processing && (
-        <div className="processing">
+        <div className='processing'>
           <p>Processing...</p>
           {processingDoneAt && <p>Expected completion time: {processingDoneAt}</p>}
         </div>
       )}
       {done && (
-        <div className="success">
+        <div className='success'>
           <p>Sucessfully saved</p>
         </div>
       )}
 
-      {error && <p className="error">{error}</p>}
+      {error && <p className='error'>{error}</p>}
 
       {/* display a message when no results found */}
       {searchQuery && gridData.every((row) => !row.some((cell) => cell.value.includes(searchQuery))) && (

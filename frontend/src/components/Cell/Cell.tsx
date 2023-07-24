@@ -50,7 +50,7 @@ interface CellProps {
  *   return (
  *     <div>
  *       <Cell
- *         value="123"  // the value of the cell
+ *         value='123'  // the value of the cell
  *         onChange={handleCellChange} // function to handle cell value change
  *         evaluateFormula={evaluateFormula} // function to evaluate formula
  *         updateDependentCells={updateDependentCells} // function to update dependent cells
@@ -124,7 +124,7 @@ const Cell: React.FC<CellProps> = ({
   };
 
   return (
-    <div className={`cell ${highlight ? 'highlight' : ''}`} onClick={handleClick} data-testid="cell">
+    <div className={`cell ${highlight ? 'highlight' : ''}`} onClick={handleClick} data-testid='cell'>
       {editing ? (
         <CellInput 
           value={inputValue} 
@@ -135,7 +135,7 @@ const Cell: React.FC<CellProps> = ({
       ) : (
         <span>
           <span className='value'>{value}</span>
-          <img src={editIcon} alt="Edit Icon" />
+          <img src={editIcon} alt='Edit Icon' />
         </span>
       )}
     </div>

@@ -74,12 +74,12 @@ const CellInput: React.FC<CellInputProps> = ({
 
   return (
     <input
-      type="text"
+      type='text'
       value={value}
       onChange={handleChange}
       onBlur={onBlur}
       autoFocus={autoFocus}
-      data-testid="input"
+      data-testid='input'
     />
   );
 };

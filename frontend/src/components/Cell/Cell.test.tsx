@@ -82,7 +82,7 @@ describe('Cell component', () => {
 
         if (formula.startsWith('=SUM')) {
           const numbers = formula.substring(5, formula.length - 1).split(',').map(Number);
-          return numbers.reduce((sum: any, num: any) => sum + num, 0);
+          return numbers.reduce((sum: string, num: number) => sum + num, 0);
         }
         return 0; // default value if the formula is not recognized
       });
