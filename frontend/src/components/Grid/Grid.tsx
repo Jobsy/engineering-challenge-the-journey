@@ -316,7 +316,7 @@ const Grid: React.FC<GridProps> = ({ rows, columns }) => {
       String.fromCharCode(65 + index)
     ); // A, B, ...
     cells.push(
-      <div className="row" key="header" data-testid="header-row">
+      <div className="row-header" key="header" data-testid="header-row">
         {columnHeaders.map((header, index) => (
           <div className="cell header" key={index}>
             {header}

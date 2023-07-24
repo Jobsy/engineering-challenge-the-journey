@@ -32,6 +32,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onChange }) => {
   return (
     <div className="search-bar">
       <input
+        className='search-bar-input'
         data-testid="search-input"
         type="text"
         placeholder="Type a search query to filter"
